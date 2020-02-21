@@ -1,9 +1,10 @@
 version: '3.7'
 services:
   ide:
-    image: patrickalaspaa/vscode-ide:latest
+    build: .
     ports:
       - "8020:8080"
+      - "9000:9000"
     volumes:
         - type: bind
           source: ./data
